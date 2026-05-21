@@ -7,43 +7,50 @@
     /* ===== LIGHT MODE ===== */
 
     --background: 0 0% 100%;
-    --foreground: 220 40% 18%;
+    --foreground: 247 50% 18%;        /* Deep navy-tinted dark text */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 18%;
+    --card-foreground: 247 50% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 18%;
+    --popover-foreground: 247 50% 18%;
 
-    /* 🔵 PRIMARY (Logo Blue) */
-    --primary: 215 75% 32%;
+    /* 🔵 PRIMARY — Logo navy (#2E2776) */
+    --primary: 244 51% 31%;
     --primary-foreground: 0 0% 100%;
 
-    /* 🔷 SECONDARY (Soft Blue) */
-    --secondary: 210 70% 45%;
+    /* 🔷 SECONDARY — Lighter navy (#3D3494) */
+    --secondary: 244 47% 39%;
     --secondary-foreground: 0 0% 100%;
 
-    /* 🟠 ACCENT (Sun Orange) */
-    --accent: 18 95% 55%;
+    /* 🟡 ACCENT — Sun gold / amber (#D4860B) */
+    --accent: 36 92% 44%;
     --accent-foreground: 0 0% 100%;
 
-    /* Neutral UI */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 40%;
+    /* 🌾 MUTED — Cream wheat (#FAF0DC / #F2CFA0) */
+    --muted: 38 80% 92%;
+    --muted-foreground: 36 40% 40%;
+
+    /* ☁️ SKY — Light blue from shield border (#B8D4F0) */
+    --sky: 210 68% 83%;
+    --sky-foreground: 213 60% 25%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
+    --border: 244 20% 88%;
+    --input: 244 20% 88%;
 
-    /* Focus Ring */
-    --ring: 18 95% 55%;
+    /* Focus ring = gold, like the sun */
+    --ring: 36 92% 44%;
+
+    /* Radius */
+    --radius: 0.5rem;
   }
-
 }
 
 @layer components {
+
   /* Labels */
   .signUpFormText {
     @apply text-base xs:text-lg font-semibold text-primary mb-1;
@@ -55,10 +62,10 @@
   }
 
   .signUpInputs_Focused {
-    @apply border-primary ring-2 ring-ring;
+    @apply border-primary ring-2 ring-ring/30;
   }
 
-  /* 🔵 Primary Button */
+  /* 🔵 Primary Button — navy gradient */
   .primaryButton {
     @apply text-primary-foreground rounded-lg px-4 py-2 font-medium transition duration-200 active:scale-95;
     background: linear-gradient(
@@ -73,14 +80,30 @@
     @apply bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  /* 🟠 Accent Button (CTA) */
+  /* 🟡 Accent Button — gold CTA */
   .accentButton {
     @apply bg-accent text-accent-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
+  }
+
+  /* 🌾 Ghost / soft button — cream wheat tone */
+  .ghostButton {
+    @apply bg-muted text-muted-foreground hover:brightness-95 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
   /* Card UI */
   .cardUI {
     @apply bg-card text-card-foreground border border-border rounded-xl p-4 shadow-sm;
+  }
+
+  /* Accent card — navy left border */
+  .cardAccent {
+    @apply cardUI border-l-4 border-l-primary rounded-l-none;
+  }
+
+  /* Gold card — sun/gold left border */
+  .cardGold {
+    @apply cardUI border-l-4 rounded-l-none;
+    border-left-color: hsl(var(--accent));
   }
 
   /* Page container */
