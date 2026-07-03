@@ -120,7 +120,7 @@ const ViewCertificate = ({
         >
           <Pdf
             trustAllCerts={false}
-            source={{ uri: scannedResults.fileUrl || scannedResults?.pdf_url, cache: true, headers: {
+            source={{ uri: scannedResults.fileUrl || scannedResults?.pdf_url, cache: false, headers: {
               "Accept": "application/pdf",
             }}}
             onError={(error) => {

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "K. P .B. Hinduja College SeQR Scan",
-    "slug": "kpbhindujacollege-seqr-scan",
+    "name": "Jawaharlal Darda Institute of Engineering & Technology SeQR Scan",
+    "slug": "jdiet-seqr-scan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -13,7 +13,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.kpbhindujacollege.seqrscan",
+      "bundleIdentifier": "com.jdiet.seqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       }
@@ -24,7 +24,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.kpbhindujacollege.seqrscan",
+      "package": "com.jdiet.seqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
