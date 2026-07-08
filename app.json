@@ -16,7 +16,8 @@
       "bundleIdentifier": "com.jdiet.seqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
-      }
+      },
+      "appleTeamId": "U9SLQM277R"
     },
     "android": {
       "edgeToEdgeEnabled": true,
@@ -88,7 +89,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "bfacd554-cd13-4b4f-b18f-4e0e9134fa05"
+        "projectId": "ec7cf323-7a63-49c4-b7dd-c8469ae10eaa"
       }
     }
   }
