@@ -1,5 +1,11 @@
-import { FlatList, Linking, ScrollView, useWindowDimensions, View } from "react-native";
-import React, { useMemo, useRef } from "react";
+import {
+  FlatList,
+  Linking,
+  ScrollView,
+  useWindowDimensions,
+  View,
+} from "react-native";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Pdf from "react-native-pdf";
 import {
   Card,
@@ -23,7 +29,7 @@ import {
 import { cn } from "@/libs/utils";
 import { Separator } from "./ui/separator";
 import Hyperlink from "react-native-hyperlink";
-
+import ReactNativeBlobUtil from "react-native-blob-util";
 
 type Props = {
   scannedResults: IVerifierCertificate & IScanHistoryData;
@@ -41,6 +47,8 @@ const ViewCertificate = ({
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
+  console.log(scannedResults?.fileUrl,"scannedResults");
+  
   const columnWidths = useMemo(() => {
     return MIN_COLUMN_WIDTHS.map((minWidth) => {
       const evenWidth = width / MIN_COLUMN_WIDTHS.length;
@@ -49,7 +57,33 @@ const ViewCertificate = ({
   }, [width]);
 
   // console.log(scannedResults.pdf_url, "scannedResults.fileUrl");
-  
+  const [pdfPath, setPdfPath] = useState<string | null>(null);
+
+  useEffect(() => {
+   const download = async () => {
+            const path = `${ReactNativeBlobUtil.fs.dirs.CacheDir}/test.pdf`;
+
+            const res = await ReactNativeBlobUtil.fetch(
+                'GET',
+                scannedResults.fileUrl.replace(
+                    /\\/g,
+                    '/',
+                ),
+            );
+
+            await ReactNativeBlobUtil.fs.writeFile(
+                path,
+                res.base64(),
+                'base64',
+            );
+
+            setPdfPath(`file://${path}`);
+        };
+
+        download();
+  }, []);
+
+  console.log(pdfPath, "pdfPath");
 
   return (
     <View className="flex-1">
@@ -62,7 +96,9 @@ const ViewCertificate = ({
           <Text className="text-base xs:text-lg">
             Document ID:{" "}
             <Text className="font-semibold">
-              {scannedResults.serialNo || scannedResults.serial_no || scannedResults.document_id}
+              {scannedResults.serialNo ||
+                scannedResults.serial_no ||
+                scannedResults.document_id}
             </Text>
           </Text>
           <Text className="text-base xs:text-lg">
@@ -78,9 +114,7 @@ const ViewCertificate = ({
           )} */}
           {barcodeData?.toString().includes("http") && (
             <View>
-              <Text className="text-base xs:text-lg">
-                Data:
-              </Text>
+              <Text className="text-base xs:text-lg">Data:</Text>
               <Hyperlink
                 linkStyle={{
                   color: "#2563eb",
@@ -90,12 +124,10 @@ const ViewCertificate = ({
                 onPress={(url) => Linking.openURL(url)}
               >
                 <Text className="text-gray-800 text-base leading-6">
-                  {
-                    barcodeData
-                      ?.toString()
-                      .split("\n")
-                      .find((line) => line.includes("http")) ?? ""
-                  }
+                  {barcodeData
+                    ?.toString()
+                    .split("\n")
+                    .find((line) => line.includes("http")) ?? ""}
                 </Text>
               </Hyperlink>
             </View>
@@ -104,7 +136,7 @@ const ViewCertificate = ({
       </Card>
 
       {scannedResults.verification_type != 1 ||
-        scannedResults.document_status ? (
+      scannedResults.document_status ? (
         <View
           className="flex-1 my-4"
           onStartShouldSetResponder={() => {
@@ -120,9 +152,13 @@ const ViewCertificate = ({
         >
           <Pdf
             trustAllCerts={false}
-            source={{ uri: scannedResults.fileUrl || scannedResults?.pdf_url, cache: false, headers: {
-              "Accept": "application/pdf",
-            }}}
+            source={{
+              uri: pdfPath ?? (scannedResults.fileUrl || scannedResults?.pdf_url),
+              cache: false,
+              headers: {
+                Accept: "application/pdf",
+              },
+            }}
             onError={(error) => {
               console.log(error, "PDF_ERROR");
             }}

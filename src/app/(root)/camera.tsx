@@ -8,11 +8,11 @@ import {
   BarcodeType,
 } from "expo-camera";
 import { Button } from "@/components/ui/button";
-import { router, useLocalSearchParams, useNavigation } from "expo-router";
+import { router, useIsFocused, useLocalSearchParams, useNavigation } from "expo-router";
 import Header from "@/components/Header";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text } from "@/components/ui/text";
-import BarcodeMask from "react-native-barcode-mask";
+import BarcodeMask from "@meksiabdou/react-native-barcode-mask";
 
 import * as Haptics from "expo-haptics";
 import axiosInstance from "@/utils/axiosInstance";
@@ -24,7 +24,6 @@ import {
 import useUser from "@/hooks/useUser";
 import { useToast } from "react-native-toast-notifications";
 import axios from "axios";
-import { useIsFocused } from "@react-navigation/native";
 import { storage } from "@/utils/storageService";
 
 type Props = {};
@@ -59,9 +58,14 @@ const CameraScreen = ({ }: Props) => {
       cameraRef.current?.pausePreview();
     }
     navigation.setOptions({
-      header: () => <Header isBackVisible headerTitle="Scan QR" />,
+      header: () => (
+        <Header
+          isBackVisible
+          headerTitle={scanner_type === "code39" ? "Scan Barcode" : "Scan QR"}
+        />
+      ),
     });
-  }, [isFocused]);
+  }, [isFocused, scanner_type]);
 
   const handleBarCodeScanned = (barcodeData: BarcodeScanningResult) => {
     if (scanned || !barcodeData || isFetchingScannedData) return;
@@ -156,13 +160,13 @@ const CameraScreen = ({ }: Props) => {
   };
 
   if (!permission) {
-    return <View />;
+    return <View className="flex-1 bg-stone-900" />;
   }
 
   if (!permission.granted) {
     return (
-      <SafeAreaView className="flex-1 items-center justify-center bg-stone-900">
-        <Text className="text-white text-center">
+      <SafeAreaView className="flex-1 items-center justify-center bg-stone-900 px-6 gap-4">
+        <Text className="text-white text-center text-base">
           We need to access your camera to scan your document's / certificate's QR Code
         </Text>
         <Button onPress={requestPermission}>
@@ -173,28 +177,34 @@ const CameraScreen = ({ }: Props) => {
   }
 
   return (
-    <View className="flex-1 justify-center">
-      <CameraView
-        ref={cameraRef}
-        style={{ flex: 1, position: "relative" }}
-        barcodeScannerSettings={{
-          barcodeTypes: [scanner_type],
-        }}
-        onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
-      />
+    <View className="flex-1 justify-center bg-black">
+      {scanner_type && (
+        <CameraView
+          ref={cameraRef}
+          style={{ flex: 1, position: "relative" }}
+          barcodeScannerSettings={{
+            barcodeTypes: [scanner_type],
+          }}
+          onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
+        />
+      )}
       <BarcodeMask
         width={300}
         height={scanner_type == "qr" ? 300 : 100}
         showAnimatedLine={false}
         edgeRadius={8}
+        outerMaskOpacity={0.6}
+
       />
 
       {isFetchingScannedData && (
-        <View className="absolute top-3/4 self-center items-center flex-row">
-          <ActivityIndicator size={'small'} color={'#237fc5'} />
-          <Text className="text-white bg-black/40 p-4 rounded-lg">
-            Scanning your {scanner_type} data. Please wait...
-          </Text>
+        <View className="absolute top-3/4 left-0 right-0 items-center">
+          <View className="flex-row items-center gap-2 bg-black/40 px-4 py-3 rounded-lg">
+            <ActivityIndicator size="small" color="#237fc5" />
+            <Text className="text-white">
+              Scanning your {scanner_type} data. Please wait...
+            </Text>
+          </View>
         </View>
       )}
     </View>

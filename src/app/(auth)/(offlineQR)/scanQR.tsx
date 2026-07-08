@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import pako from "pako";
 import { decode as atob, encode as btoa } from "base-64";
 import { CameraView, FlashMode, useCameraPermissions } from "expo-camera";
-import BarcodeMask from "react-native-barcode-mask";
+import BarcodeMask from "@meksiabdou/react-native-barcode-mask";
 import { decryptAES } from "../../../libs/decryptAES";
 import { useToast } from "react-native-toast-notifications";
 import { router } from "expo-router";
@@ -157,6 +157,7 @@ const scanQR = (props: Props) => {
           height={300}
           showAnimatedLine={false}
           edgeRadius={8}
+          outerMaskOpacity={0.6}
         />
       </CameraView>
     </View>

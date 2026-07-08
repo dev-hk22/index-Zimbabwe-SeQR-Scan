@@ -27,7 +27,7 @@ const HomeScreen = ({}: Props) => {
   const goToCameraScanner = (scanner_type: BarcodeType) => {
     
     router.navigate({
-      pathname: "/camera",
+      pathname: '/(root)/camera',
       params: {
         scanner_type: scanner_type,
       },

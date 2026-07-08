@@ -1,31 +1,29 @@
 {
   "expo": {
-    "name": "Jawaharlal Darda Institute of Engineering & Technology SeQR Scan",
-    "slug": "jdiet-seqr-scan",
-    "version": "1.0.0",
+    "name": "Anant National University SeQR Scan",
+    "slug": "anu-seqr-scan",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.jdiet.seqrscan",
+      "bundleIdentifier": "com.scube.anuseqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
       "appleTeamId": "U9SLQM277R"
     },
     "android": {
-      "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jdiet.seqrscan",
+      "package": "com.anuseqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -33,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 1
+      "versionCode": 9
     },
     "web": {
       "bundler": "metro",
@@ -79,7 +77,8 @@
         }
       ],
       "expo-font",
-      "expo-web-browser"
+      "expo-web-browser",
+      "expo-image"
     ],
     "experiments": {
       "typedRoutes": true
@@ -87,9 +86,6 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "ec7cf323-7a63-49c4-b7dd-c8469ae10eaa"
       }
     }
   }

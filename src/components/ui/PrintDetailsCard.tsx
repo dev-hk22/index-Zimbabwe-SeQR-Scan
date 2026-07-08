@@ -1,6 +1,6 @@
+import { router, useNavigation } from 'expo-router';
 import React from 'react';
 import { Text, View, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 type PrintDetail = {
     barcode: string;
@@ -20,7 +20,6 @@ type Props = {
 const { width } = Dimensions.get('window');
 
 const PrintDetailsCard: React.FC<Props> = ({ printDetailsAvailable, data }) => {
-    const navigation = useNavigation();
 console.log(printDetailsAvailable,"printDetailsAvailable");
 
     if (!printDetailsAvailable && data?.status == '1') {
@@ -31,7 +30,7 @@ console.log(printDetailsAvailable,"printDetailsAvailable");
                         In order to view the printing details,
                     </Text>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('InstituteAuditScanScreen' as never)}
+                        onPress={() => router.navigate('InstituteAuditScanScreen' as never)}
                     >
                         <Text className="text-blue-600 text-lg font-semibold text-center underline">
                             Click here

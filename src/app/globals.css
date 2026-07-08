@@ -4,65 +4,60 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE — Jawaharlal Darda College ===== */
+    /* ===== LIGHT MODE — Blue/White geometric logo ===== */
     --background: 0 0% 100%;
-    --foreground: 358 40% 18%;              /* Deep red-tinted dark text */
+    --foreground: 204 55% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 358 40% 18%;
+    --card-foreground: 204 55% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 358 40% 18%;
+    --popover-foreground: 204 55% 18%;
 
-    /* 🔴 PRIMARY — Logo red (#ED3237) */
-    --primary: 358 84% 56%;
+    /* Logo blue */
+    --primary: 203 80% 41%;
     --primary-foreground: 0 0% 100%;
 
-    /* 🔺 SECONDARY — Deeper crimson shade */
-    --secondary: 358 70% 44%;
+    /* Darker blue */
+    --secondary: 203 80% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    /* 🟡 ACCENT — Logo gold / amber (#FAA831) */
-    --accent: 36 95% 59%;
+    /* Soft sky accent */
+    --accent: 201 92% 62%;
     --accent-foreground: 0 0% 100%;
 
-    /* 🌾 MUTED — Cream wheat, warmed to match gold */
-    --muted: 36 90% 94%;
-    --muted-foreground: 36 40% 40%;
+    /* Cool neutral */
+    --muted: 204 30% 95%;
+    --muted-foreground: 204 25% 38%;
 
-    /* ☁️ SKY — soft pink-tinted neutral echoing the red */
-    --sky: 358 68% 90%;
-    --sky-foreground: 358 60% 30%;
+    --sky: 202 85% 92%;
+    --sky-foreground: 203 70% 30%;
 
-    --destructive: 0 70% 50%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 358 20% 88%;
-    --input: 358 20% 88%;
+    --border: 204 20% 88%;
+    --input: 204 20% 88%;
 
-    /* Focus ring = gold, like the logo's gear/sun */
-    --ring: 36 95% 59%;
+    --ring: 201 92% 62%;
 
-    /* Radius */
     --radius: 0.5rem;
   }
 }
 
 @layer components {
-  /* Labels */
   .signUpFormText {
     @apply text-base xs:text-lg font-semibold text-primary mb-1;
   }
 
-  /* Inputs */
   .signUpInputs {
     @apply rounded-lg border border-input bg-background px-3 py-2 transition outline-none;
   }
+
   .signUpInputs_Focused {
     @apply border-primary ring-2 ring-ring/30;
   }
 
-  /* 🔴 Primary Button — red gradient */
   .primaryButton {
     @apply text-primary-foreground rounded-lg px-4 py-2 font-medium transition duration-200 active:scale-95;
     background: linear-gradient(
@@ -72,38 +67,31 @@
     );
   }
 
-  /* 🔺 Secondary Button */
   .secondaryButton {
     @apply bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  /* 🟡 Accent Button — gold CTA */
   .accentButton {
     @apply bg-accent text-accent-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  /* 🌾 Ghost / soft button — cream wheat tone */
   .ghostButton {
     @apply bg-muted text-muted-foreground hover:brightness-95 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  /* Card UI */
   .cardUI {
     @apply bg-card text-card-foreground border border-border rounded-xl p-4 shadow-sm;
   }
 
-  /* Accent card — red left border */
   .cardAccent {
     @apply cardUI border-l-4 border-l-primary rounded-l-none;
   }
 
-  /* Gold card — gear/sun gold left border */
-  .cardGold {
+  .cardSky {
     @apply cardUI border-l-4 rounded-l-none;
     border-left-color: hsl(var(--accent));
   }
 
-  /* Page container */
   .pageContainer {
     @apply bg-background text-foreground min-h-screen;
   }
