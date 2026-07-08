@@ -69,7 +69,7 @@ const WelcomeScreen = ({ }: Props) => {
           <View>
             <Image
               className="size-72"
-              source={require("@/assets/images/logos/adaptive-icon.png")}
+              source={require("@/assets/images/logos/splash-icon.png")}
               resizeMode="cover"
             />
           </View>
