@@ -47,8 +47,9 @@ const ViewCertificate = ({
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
-  console.log(scannedResults?.fileUrl,"scannedResults");
-  
+  // console.log(scannedResults?.fileUrl,"scannedResults");
+  // console.log(scannedResults?.pdf_url, "barcodeData---");
+
   const columnWidths = useMemo(() => {
     return MIN_COLUMN_WIDTHS.map((minWidth) => {
       const evenWidth = width / MIN_COLUMN_WIDTHS.length;
@@ -60,27 +61,20 @@ const ViewCertificate = ({
   const [pdfPath, setPdfPath] = useState<string | null>(null);
 
   useEffect(() => {
-   const download = async () => {
-            const path = `${ReactNativeBlobUtil.fs.dirs.CacheDir}/test.pdf`;
+    const download = async () => {
+      const path = `${ReactNativeBlobUtil.fs.dirs.CacheDir}/test.pdf`;
+      const url = (scannedResults.fileUrl || scannedResults.pdf_url).replace(
+        /\\/g,
+        "/",
+      );
+      const res = await ReactNativeBlobUtil.fetch("GET", url);
 
-            const res = await ReactNativeBlobUtil.fetch(
-                'GET',
-                scannedResults.fileUrl.replace(
-                    /\\/g,
-                    '/',
-                ),
-            );
+      await ReactNativeBlobUtil.fs.writeFile(path, res.base64(), "base64");
 
-            await ReactNativeBlobUtil.fs.writeFile(
-                path,
-                res.base64(),
-                'base64',
-            );
+      setPdfPath(`file://${path}`);
+    };
 
-            setPdfPath(`file://${path}`);
-        };
-
-        download();
+    download();
   }, []);
 
   console.log(pdfPath, "pdfPath");
@@ -153,7 +147,8 @@ const ViewCertificate = ({
           <Pdf
             trustAllCerts={false}
             source={{
-              uri: pdfPath ?? (scannedResults.fileUrl || scannedResults?.pdf_url),
+              uri:
+                pdfPath ?? (scannedResults.fileUrl || scannedResults?.pdf_url),
               cache: false,
               headers: {
                 Accept: "application/pdf",

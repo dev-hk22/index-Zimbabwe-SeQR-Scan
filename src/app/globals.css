@@ -4,41 +4,42 @@
 
 @layer base {
   :root {
-    /* AURO University-inspired palette */
+    /* BEST Innovation University-inspired palette */
     --background: 0 0% 100%;
-    --foreground: 236 32% 24%;
+    --foreground: 243 45% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 236 32% 24%;
+    --card-foreground: 243 45% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 236 32% 24%;
+    --popover-foreground: 243 45% 22%;
 
-    /* Deep navy/indigo from logo text & emblem ring */
-    --primary: 236 32% 24%;
+    /* Deep indigo/violet-blue from "BEST" & "Innovation University" text (left rays) */
+    --primary: 243 45% 28%;
     --primary-foreground: 0 0% 100%;
 
-    /* Slightly lighter navy accent (used in banner strip) */
-    --secondary: 236 30% 32%;
+    /* Slightly lighter indigo accent (used in banner strip) */
+    --secondary: 14 85% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Gold-orange sunburst from emblem */
-    --accent: 38 88% 55%;
-    --accent-foreground: 236 32% 20%;
+    /* Vibrant orange sunburst (right rays of emblem) */
+    --accent: 14 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --muted: 236 15% 96%;
-    --muted-foreground: 236 10% 40%;
+    --muted: 243 15% 96%;
+    --muted-foreground: 243 10% 40%;
 
-    /* Warm orange highlight (inner glow of emblem) */
-    --sky: 32 90% 58%;
-    --sky-foreground: 236 32% 20%;
+    /* Warm orange-red highlight (inner rays of emblem) */
+    --sky: 10 82% 58%;
+    --sky-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 50%;
+    /* Crimson red from "EMPOWERED BY INNOVATION" tagline */
+    --destructive: 355 65% 42%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 236 15% 88%;
-    --input: 236 15% 88%;
-    --ring: 38 88% 55%;
+    --border: 243 15% 88%;
+    --input: 243 15% 88%;
+    --ring: 14 85% 55%;
 
     --radius: 0.5rem;
   }
