@@ -23,7 +23,7 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'Anant National University',
+    APP_NAME: 'KS Institute of Technology',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
     SHOW_ANSWER_BOOKLET: false

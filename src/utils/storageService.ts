@@ -1,7 +1,7 @@
-import { MMKV } from 'react-native-mmkv';
+import { createMMKV, MMKV } from 'react-native-mmkv';
 
 // Initialize MMKV instance
-export const storage = new MMKV();
+export const storage = createMMKV()
 
 // Create a wrapper for MMKV to match redux-persist's Storage interface
 export const mmkvStorage = {
@@ -14,7 +14,7 @@ export const mmkvStorage = {
         return Promise.resolve(value || null);
     },
     removeItem: (key: string) => {
-        storage.delete(key);
+        storage.remove(key);
         return Promise.resolve();
     },
 };

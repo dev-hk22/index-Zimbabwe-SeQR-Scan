@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Anant National University SeQR Scan",
-    "slug": "anu-seqr-scan",
+    "name": " KS Institute of Technology SeQR Scan",
+    "slug": "ksit-seqr-scan",
     "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.anuseqrscan",
+      "bundleIdentifier": "com.ksit.seqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anuseqrscan",
+      "package": "com.ksit.seqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -42,6 +42,7 @@
       "expo-router",
       "@config-plugins/react-native-blob-util",
       "@config-plugins/react-native-pdf",
+      "./plugins/withReleaseKeystore.js",
       [
         "expo-splash-screen",
         {
@@ -86,9 +87,6 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "69109aef-558e-48a2-8258-0eefb0456a41"
       }
     }
   }
