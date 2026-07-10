@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": " KS Institute of Technology SeQR Scan",
-    "slug": "ksit-seqr-scan",
+    "name": "Auro SeQR Scan",
+    "slug": "auro-seqr-scan",
     "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.ksit.seqrscan",
+      "bundleIdentifier": "com.scube.auroseqr",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ksit.seqrscan",
+      "package": "com.auroseqr",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",

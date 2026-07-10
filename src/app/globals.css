@@ -4,41 +4,41 @@
 
 @layer base {
   :root {
-    /* KSIT-inspired palette */
+    /* AURO University-inspired palette */
     --background: 0 0% 100%;
-    --foreground: 241 38% 26%;
+    --foreground: 236 32% 24%;
 
     --card: 0 0% 100%;
-    --card-foreground: 241 38% 26%;
+    --card-foreground: 236 32% 24%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 241 38% 26%;
+    --popover-foreground: 236 32% 24%;
 
-    /* Royal blue from logo */
-    --primary: 241 42% 45%;
+    /* Deep navy/indigo from logo text & emblem ring */
+    --primary: 236 32% 24%;
     --primary-foreground: 0 0% 100%;
 
-    /* Deep navy accent */
-    --secondary: 238 45% 33%;
+    /* Slightly lighter navy accent (used in banner strip) */
+    --secondary: 236 30% 32%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Gold ring/laurel accent */
-    --accent: 42 85% 62%;
-    --accent-foreground: 241 38% 20%;
+    /* Gold-orange sunburst from emblem */
+    --accent: 38 88% 55%;
+    --accent-foreground: 236 32% 20%;
 
-    --muted: 240 20% 96%;
-    --muted-foreground: 240 12% 40%;
+    --muted: 236 15% 96%;
+    --muted-foreground: 236 10% 40%;
 
-    /* Red strip accent */
-    --sky: 357 82% 58%;
-    --sky-foreground: 0 0% 100%;
+    /* Warm orange highlight (inner glow of emblem) */
+    --sky: 32 90% 58%;
+    --sky-foreground: 236 32% 20%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 20% 88%;
-    --input: 240 20% 88%;
-    --ring: 42 85% 62%;
+    --border: 236 15% 88%;
+    --input: 236 15% 88%;
+    --ring: 38 88% 55%;
 
     --radius: 0.5rem;
   }
