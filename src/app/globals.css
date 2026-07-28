@@ -4,44 +4,40 @@
 
 @layer base {
   :root {
-    /* BEST Innovation University-inspired palette */
+    /* ===== LIGHT MODE (Falcon Press Ltd) ===== */
+
     --background: 0 0% 100%;
-    --foreground: 243 45% 22%;
+    --foreground: 40 15% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 243 45% 22%;
+    --card-foreground: 40 15% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 243 45% 22%;
+    --popover-foreground: 40 15% 12%;
 
-    /* Deep indigo/violet-blue from "BEST" & "Innovation University" text (left rays) */
-    --primary: 243 45% 28%;
-    --primary-foreground: 0 0% 100%;
+    /* Falcon Gold (shield border/falcon/wordmark, ~#C89B4C) */
+    --primary: 38 52% 54%;
+    --primary-foreground: 40 20% 10%;
 
-    /* Slightly lighter indigo accent (used in banner strip) */
-    --secondary: 14 85% 55%;
-    --secondary-foreground: 0 0% 100%;
+    /* Light Gold Surface */
+    --secondary: 38 45% 94%;
+    --secondary-foreground: 38 52% 28%;
 
-    /* Vibrant orange sunburst (right rays of emblem) */
-    --accent: 14 85% 55%;
-    --accent-foreground: 0 0% 100%;
+    /* Charcoal-Black Accent (shield interior) */
+    --accent: 40 10% 92%;
+    --accent-foreground: 40 15% 14%;
 
-    --muted: 243 15% 96%;
-    --muted-foreground: 243 10% 40%;
+    /* Neutral Colors */
+    --muted: 38 18% 96%;
+    --muted-foreground: 40 8% 46%;
 
-    /* Warm orange-red highlight (inner rays of emblem) */
-    --sky: 10 82% 58%;
-    --sky-foreground: 0 0% 100%;
-
-    /* Crimson red from "EMPOWERED BY INNOVATION" tagline */
-    --destructive: 355 65% 42%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 243 15% 88%;
-    --input: 243 15% 88%;
-    --ring: 14 85% 55%;
+    --border: 38 25% 88%;
+    --input: 38 25% 88%;
 
-    --radius: 0.5rem;
+    --ring: 38 52% 54%;
   }
 }
 
@@ -51,48 +47,22 @@
   }
 
   .signUpInputs {
-    @apply rounded-lg border border-input bg-background px-3 py-2 outline-none transition;
-  }
-
-  .signUpInputs_Focused {
-    @apply border-primary ring-2 ring-ring/30;
+    @apply rounded-lg border border-input bg-background px-3 py-2 transition;
   }
 
   .primaryButton {
-    @apply rounded-lg px-4 py-2 font-medium text-primary-foreground transition active:scale-95;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary))
-    );
+    @apply bg-primary text-primary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
+  }
+
+  .signUpInputs_Focused {
+    @apply border-primary ring-2 ring-primary;
   }
 
   .secondaryButton {
-    @apply rounded-lg px-4 py-2 font-medium bg-secondary text-secondary-foreground transition hover:brightness-110 active:scale-95;
+    @apply bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
   .accentButton {
-    @apply rounded-lg px-4 py-2 font-medium bg-accent text-accent-foreground transition hover:brightness-105 active:scale-95;
-  }
-
-  .ghostButton {
-    @apply rounded-lg px-4 py-2 font-medium bg-muted text-muted-foreground transition hover:brightness-95 active:scale-95;
-  }
-
-  .cardUI {
-    @apply rounded-xl border border-border bg-card p-4 text-card-foreground shadow-sm;
-  }
-
-  .cardAccent {
-    @apply cardUI rounded-l-none border-l-4 border-l-accent;
-  }
-
-  .cardSky {
-    @apply cardUI rounded-l-none border-l-4;
-    border-left-color: hsl(var(--sky));
-  }
-
-  .pageContainer {
-    @apply min-h-screen bg-background text-foreground;
+    @apply bg-accent text-accent-foreground hover:brightness-110 transition rounded-lg px-4 py-2 font-medium;
   }
 }
