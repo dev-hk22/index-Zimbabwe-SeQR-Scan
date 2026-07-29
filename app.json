@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Falcon SeQR Scan",
-    "slug": "falcon-seqr-scan",
-    "version": "3.0.0",
+    "name": "GHRCEMP SeQR Scan",
+    "slug": "ghrcemp-seqr-scan",
+    "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.falcon",
+      "bundleIdentifier": "com.scube.ghrcemp",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.falconseqrdoc",
+      "package": "com.ghrcemp",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 8
+      "versionCode": 7
     },
     "web": {
       "bundler": "metro",
