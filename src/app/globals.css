@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Falcon Press Ltd) ===== */
+    /* ===== LIGHT MODE (G H Raisoni College, Nagpur) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 40 15% 12%;
+    --foreground: 270 20% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 40 15% 12%;
+    --card-foreground: 270 20% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 40 15% 12%;
+    --popover-foreground: 270 20% 14%;
 
-    /* Falcon Gold (shield border/falcon/wordmark, ~#C89B4C) */
-    --primary: 38 52% 54%;
-    --primary-foreground: 40 20% 10%;
+    /* Raisoni Purple (lion mark/wordmark, ~#5B3A8E) */
+    --primary: 267 42% 39%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Light Gold Surface */
-    --secondary: 38 45% 94%;
-    --secondary-foreground: 38 52% 28%;
+    /* Light Purple Surface */
+    --secondary: 267 30% 95%;
+    --secondary-foreground: 267 42% 28%;
 
-    /* Charcoal-Black Accent (shield interior) */
-    --accent: 40 10% 92%;
-    --accent-foreground: 40 15% 14%;
+    /* Raisoni Orange Accent (~#EE5B31) */
+    --accent: 14 82% 94%;
+    --accent-foreground: 14 78% 44%;
 
     /* Neutral Colors */
-    --muted: 38 18% 96%;
-    --muted-foreground: 40 8% 46%;
+    --muted: 267 12% 96%;
+    --muted-foreground: 220 6% 46%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 38 25% 88%;
-    --input: 38 25% 88%;
+    --border: 267 18% 88%;
+    --input: 267 18% 88%;
 
-    --ring: 38 52% 54%;
+    --ring: 267 42% 39%;
   }
 }
 
