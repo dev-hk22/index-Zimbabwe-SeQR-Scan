@@ -4,40 +4,41 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (G H Raisoni College, Nagpur) ===== */
+    /* ===== LIGHT MODE (Gear/Chicken Mascot) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 270 20% 14%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 20% 14%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 20% 14%;
+    --popover-foreground: 0 0% 15%;
 
-    /* Raisoni Purple (lion mark/wordmark, ~#5B3A8E) */
-    --primary: 267 42% 39%;
-    --primary-foreground: 0 0% 100%;
+    /* Comb Orange (~#E8A23C) */
+    --primary: 36 74% 57%;
+    --primary-foreground: 0 0% 12%;
 
-    /* Light Purple Surface */
-    --secondary: 267 30% 95%;
-    --secondary-foreground: 267 42% 28%;
+    /* Light Orange Surface */
+    --secondary: 36 60% 94%;
+    --secondary-foreground: 36 60% 30%;
 
-    /* Raisoni Orange Accent (~#EE5B31) */
-    --accent: 14 82% 94%;
-    --accent-foreground: 14 78% 44%;
+    /* Gear Yellow-Green Accent (~#D4D14B) */
+    --accent: 58 45% 88%;
+    --accent-foreground: 58 40% 28%;
 
     /* Neutral Colors */
-    --muted: 267 12% 96%;
-    --muted-foreground: 220 6% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
 
-    --destructive: 0 84% 60%;
+    /* Wattle Red-Orange (~#F15A3D) mapped to destructive */
+    --destructive: 10 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 267 18% 88%;
-    --input: 267 18% 88%;
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
 
-    --ring: 267 42% 39%;
+    --ring: 36 74% 57%;
   }
 }
 

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "GHRICACSN SeQR Scan",
-    "slug": "ghricacsn-seqr-scan",
-    "version": "1.2.0",
+    "name": "GHRIETN SeQR Scan",
+    "slug": "ghrietn-seqr-scan",
+    "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.reactjs.native.example.ghricacsnseqrscan",
+      "bundleIdentifier": "com.scube.GHRIETN",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ghricacsnseqrscan",
+      "package": "com.ghrietn",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
