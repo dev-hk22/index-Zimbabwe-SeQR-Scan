@@ -23,7 +23,7 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'ICAT',
+    APP_NAME: 'IIT Jammu',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
     SHOW_ANSWER_BOOKLET: false

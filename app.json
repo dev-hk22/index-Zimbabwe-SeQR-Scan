@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ICAT SeQR Scan",
-    "slug": "icat-seqr-scan",
-    "version": "2.5.0",
+    "name": "IIT Jammu Doc Verify",
+    "slug": "iit-jammu-doc-verify",
+    "version": "3.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.ICAT",
+      "bundleIdentifier": "org.scube.iit-jammu",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.icat",
+      "package": "com.iit_jammu",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
