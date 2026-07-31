@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (G H Raisoni College, Nagpur) ===== */
+    /* ===== LIGHT MODE (iCAT) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 270 20% 14%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 20% 14%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 20% 14%;
+    --popover-foreground: 0 0% 15%;
 
-    /* Raisoni Purple (lion mark/wordmark, ~#5B3A8E) */
-    --primary: 267 42% 39%;
+    /* iCAT Red (dot/swoosh/underline, ~#E31E24) */
+    --primary: 358 78% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Purple Surface */
-    --secondary: 267 30% 95%;
-    --secondary-foreground: 267 42% 28%;
+    /* Light Red Surface */
+    --secondary: 358 60% 95%;
+    --secondary-foreground: 358 65% 34%;
 
-    /* Raisoni Orange Accent (~#EE5B31) */
-    --accent: 14 82% 94%;
-    --accent-foreground: 14 78% 44%;
+    /* Charcoal Accent (letterforms, ~#2B2B2B) */
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 16%;
 
     /* Neutral Colors */
-    --muted: 267 12% 96%;
-    --muted-foreground: 220 6% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 358 78% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 267 18% 88%;
-    --input: 267 18% 88%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
 
-    --ring: 267 42% 39%;
+    --ring: 358 78% 50%;
   }
 }
 
