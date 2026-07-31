@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "GHRSBMNM SeQR Scan",
-    "slug": "ghrsbmnm-seqr-scan",
+    "name": "Ghrcacsp SeQR Scan",
+    "slug": "ghrcacsp-seqr-scan",
     "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.reactjs.native.example.ghrsbmnmseqrscan",
+      "bundleIdentifier": "org.reactjs.native.example.ghrcacsp",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ghrsbmnmseqrscan",
+      "package": "com.ghrcacsp",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
