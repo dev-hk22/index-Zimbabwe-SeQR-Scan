@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "IIT Jammu Doc Verify",
-    "slug": "iit-jammu-doc-verify",
+    "name": "IMT SeQR Scan",
+    "slug": "imt-seqr-scan",
     "version": "3.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.scube.iit-jammu",
+      "bundleIdentifier": "com.scube.imtseqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.iit_jammu",
+      "package": "com.imtseqrdoc",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",

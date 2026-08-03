@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (IIT Jammu) ===== */
+    /* ===== LIGHT MODE (Imtech ICT Solution) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 217 50% 14%;
+    --foreground: 210 55% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 217 50% 14%;
+    --card-foreground: 210 55% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 50% 14%;
+    --popover-foreground: 210 55% 14%;
 
-    /* IIT Jammu Royal Blue (wordmark/arc text, ~#1D4F91) */
-    --primary: 213 65% 34%;
+    /* Imtech Blue (wordmark, ~#1D6FB8) */
+    --primary: 207 72% 42%;
     --primary-foreground: 0 0% 100%;
 
     /* Light Blue Surface */
-    --secondary: 213 40% 94%;
-    --secondary-foreground: 213 60% 28%;
+    --secondary: 207 45% 94%;
+    --secondary-foreground: 207 65% 28%;
 
-    /* Sky Blue Accent (emblem rays, ~#29ABE2) */
-    --accent: 199 60% 90%;
-    --accent-foreground: 199 65% 32%;
+    /* Imtech Orange Accent (arcs/taglines, ~#E08A2E) */
+    --accent: 32 80% 92%;
+    --accent-foreground: 32 70% 38%;
 
     /* Neutral Colors */
-    --muted: 213 18% 96%;
-    --muted-foreground: 213 10% 46%;
+    --muted: 207 16% 96%;
+    --muted-foreground: 210 10% 46%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 213 22% 88%;
-    --input: 213 22% 88%;
+    --border: 207 20% 88%;
+    --input: 207 20% 88%;
 
-    --ring: 213 65% 34%;
+    --ring: 207 72% 42%;
   }
 }
 
