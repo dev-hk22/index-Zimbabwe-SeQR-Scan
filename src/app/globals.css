@@ -4,40 +4,41 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Imtech ICT Solution) ===== */
+    /* ===== LIGHT MODE (Institute of Science, Nagpur) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 210 55% 14%;
+    --foreground: 350 25% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 55% 14%;
+    --card-foreground: 350 25% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 55% 14%;
+    --popover-foreground: 350 25% 14%;
 
-    /* Imtech Blue (wordmark, ~#1D6FB8) */
-    --primary: 207 72% 42%;
+    /* Crest Red (outer ring/lettering band, ~#D9302B) */
+    --primary: 3 68% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Blue Surface */
-    --secondary: 207 45% 94%;
-    --secondary-foreground: 207 65% 28%;
+    /* Cream Surface (shield field, ~#FDF3D3) */
+    --secondary: 48 75% 92%;
+    --secondary-foreground: 350 40% 24%;
 
-    /* Imtech Orange Accent (arcs/taglines, ~#E08A2E) */
-    --accent: 32 80% 92%;
-    --accent-foreground: 32 70% 38%;
+    /* Sky Blue Accent (outer ring, ~#29ABE2) */
+    --accent: 199 60% 90%;
+    --accent-foreground: 199 65% 32%;
 
     /* Neutral Colors */
-    --muted: 207 16% 96%;
-    --muted-foreground: 210 10% 46%;
+    --muted: 350 12% 96%;
+    --muted-foreground: 350 8% 46%;
 
-    --destructive: 0 84% 60%;
+    /* Maroon (shield chevrons/emblems, ~#5E2A31) mapped to destructive */
+    --destructive: 355 40% 27%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 207 20% 88%;
-    --input: 207 20% 88%;
+    --border: 350 18% 88%;
+    --input: 350 18% 88%;
 
-    --ring: 207 72% 42%;
+    --ring: 3 68% 50%;
   }
 }
 
