@@ -4,40 +4,77 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Imtech ICT Solution) ===== */
+    /* ===== LIGHT MODE (JNTU Anantapur - Engineering College Kalikiri) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 210 55% 14%;
+    --foreground: 243 40% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 55% 14%;
+    --card-foreground: 243 40% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 55% 14%;
+    --popover-foreground: 243 40% 14%;
 
-    /* Imtech Blue (wordmark, ~#1D6FB8) */
-    --primary: 207 72% 42%;
+    /* JNTU Indigo (ring text/banner, ~#3B3593) */
+    --primary: 243 45% 39%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Blue Surface */
-    --secondary: 207 45% 94%;
-    --secondary-foreground: 207 65% 28%;
+    /* Light Indigo Surface */
+    --secondary: 243 32% 95%;
+    --secondary-foreground: 243 45% 28%;
 
-    /* Imtech Orange Accent (arcs/taglines, ~#E08A2E) */
-    --accent: 32 80% 92%;
-    --accent-foreground: 32 70% 38%;
+    /* Gear Green Accent (~#22A94D) */
+    --accent: 142 45% 90%;
+    --accent-foreground: 142 55% 26%;
 
     /* Neutral Colors */
-    --muted: 207 16% 96%;
-    --muted-foreground: 210 10% 46%;
+    --muted: 243 14% 96%;
+    --muted-foreground: 243 8% 46%;
 
-    --destructive: 0 84% 60%;
+    /* Rose Magenta (~#9C3B72) mapped to destructive */
+    --destructive: 328 42% 42%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 207 20% 88%;
-    --input: 207 20% 88%;
+    --border: 243 18% 88%;
+    --input: 243 18% 88%;
 
-    --ring: 207 72% 42%;
+    --ring: 243 45% 39%;
+  }
+
+  .dark:root {
+    /* ===== DARK MODE ===== */
+
+    --background: 243 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 243 26% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 243 26% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Brighter Indigo for dark surfaces */
+    --primary: 243 55% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 243 20% 18%;
+    --secondary-foreground: 243 55% 85%;
+
+    /* Green Accent, adjusted for dark bg */
+    --accent: 142 30% 22%;
+    --accent-foreground: 142 50% 76%;
+
+    --muted: 243 14% 16%;
+    --muted-foreground: 243 8% 72%;
+
+    /* Rose Magenta, brightened for dark bg */
+    --destructive: 328 45% 52%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 243 15% 24%;
+    --input: 243 15% 24%;
+
+    --ring: 243 55% 58%;
   }
 }
 

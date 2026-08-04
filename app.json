@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Ismail Yusuf College SeQR Scan",
-    "slug": "iyc-seqr-scan",
+    "name": "JNTUACEK SeQR Scan",
+    "slug": "jntuacek-seqr-scan",
     "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.ismailyusufcollege",
+      "bundleIdentifier": "org.reactjs.native.example.jntuacek",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.iycseqrscan",
+      "package": "com.jntuacek",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",

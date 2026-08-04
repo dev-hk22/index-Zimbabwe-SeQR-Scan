@@ -23,7 +23,7 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'Ismail Yusuf College',
+    APP_NAME: 'JNTUACEK',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
     SHOW_ANSWER_BOOKLET: false
