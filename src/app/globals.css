@@ -2,104 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   JSS Academy of Higher Education & Research — Theme
+   Derived from logo: Orange #F1642A + Royal Blue #2B4593
+   Light mode only
+   ========================================================================== */
+
 @layer base {
   :root {
-    /* ===== LIGHT MODE (JNTU Anantapur - Engineering College Kalikiri) ===== */
-
     --background: 0 0% 100%;
-    --foreground: 243 40% 14%;
+    --foreground: 228 45% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 243 40% 14%;
+    --card-foreground: 228 45% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 243 40% 14%;
+    --popover-foreground: 228 45% 15%;
 
-    /* JNTU Indigo (ring text/banner, ~#3B3593) */
-    --primary: 243 45% 39%;
+    --primary: 228 55% 38%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Indigo Surface */
-    --secondary: 243 32% 95%;
-    --secondary-foreground: 243 45% 28%;
+    --secondary: 18 85% 54%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Gear Green Accent (~#22A94D) */
-    --accent: 142 45% 90%;
-    --accent-foreground: 142 55% 26%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 40%;
 
-    /* Neutral Colors */
-    --muted: 243 14% 96%;
-    --muted-foreground: 243 8% 46%;
+    --accent: 18 85% 54%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Rose Magenta (~#9C3B72) mapped to destructive */
-    --destructive: 328 42% 42%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 243 18% 88%;
-    --input: 243 18% 88%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 228 55% 38%;
 
-    --ring: 243 45% 39%;
+    --radius: 0.5rem;
+
+    --chart-1: 228 55% 38%;
+    --chart-2: 18 85% 54%;
+    --chart-3: 220 20% 60%;
+    --chart-4: 228 55% 60%;
+    --chart-5: 18 85% 70%;
   }
+}
 
-  .dark:root {
-    /* ===== DARK MODE ===== */
-
-    --background: 243 30% 8%;
-    --foreground: 0 0% 98%;
-
-    --card: 243 26% 11%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 243 26% 11%;
-    --popover-foreground: 0 0% 98%;
-
-    /* Brighter Indigo for dark surfaces */
-    --primary: 243 55% 58%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 243 20% 18%;
-    --secondary-foreground: 243 55% 85%;
-
-    /* Green Accent, adjusted for dark bg */
-    --accent: 142 30% 22%;
-    --accent-foreground: 142 50% 76%;
-
-    --muted: 243 14% 16%;
-    --muted-foreground: 243 8% 72%;
-
-    /* Rose Magenta, brightened for dark bg */
-    --destructive: 328 45% 52%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 243 15% 24%;
-    --input: 243 15% 24%;
-
-    --ring: 243 55% 58%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
 @layer components {
-  .signUpFormText {
-    @apply text-base xs:text-lg font-semibold text-primary mb-1;
+  .card-surface {
+    @apply bg-card text-card-foreground rounded-lg border border-border shadow-sm;
   }
 
-  .signUpInputs {
-    @apply rounded-lg border border-input bg-background px-3 py-2 transition;
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium transition-colors;
   }
 
-  .primaryButton {
-    @apply bg-primary text-primary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-md px-4 py-2 font-medium transition-colors;
   }
 
-  .signUpInputs_Focused {
-    @apply border-primary ring-2 ring-primary;
+  .btn-outline {
+    @apply border border-input bg-background hover:bg-muted rounded-md px-4 py-2 font-medium transition-colors;
   }
 
-  .secondaryButton {
-    @apply bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
+  .badge-primary {
+    @apply bg-primary/10 text-primary rounded-full px-2.5 py-0.5 text-xs font-semibold;
   }
 
-  .accentButton {
-    @apply bg-accent text-accent-foreground hover:brightness-110 transition rounded-lg px-4 py-2 font-medium;
+  .badge-secondary {
+    @apply bg-secondary/10 text-secondary rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .input-field {
+    @apply border border-input bg-background rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  .header-bar {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .accent-bar {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .link-accent {
+    @apply text-secondary hover:text-secondary/80 font-medium;
   }
 }
