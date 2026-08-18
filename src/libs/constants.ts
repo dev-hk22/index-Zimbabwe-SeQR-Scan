@@ -26,7 +26,7 @@ export const TITLES = {
     APP_NAME: 'JSSAHER',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
-    SHOW_ANSWER_BOOKLET: false
+    SHOW_ANSWER_BOOKLET: true
 }
 
 export function cleanBase64(input: string): string {

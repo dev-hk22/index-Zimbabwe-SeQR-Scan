@@ -3,6 +3,7 @@
 export const INSTITUE_LOGIN = "/institute-login";
 export const SCAN_INSTITUTE_CERT = "/nidan/scan-certificate";
 export const SCAN_AUDIT_TRIALS = "/scan-audit-trail";
+export const SCAN_ANSWER_BOOKLET = "jssaher/scan-answer-book";
 
 // VERIFIER API ROUTES
 export const VERIFIER_SIGNUP = "/user-register";

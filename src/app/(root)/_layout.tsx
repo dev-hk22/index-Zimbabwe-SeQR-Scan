@@ -43,6 +43,15 @@ const RootLayout = ({}: Props) => {
       />
 
       <Stack.Screen
+        name="booklet"
+        options={{
+          headerBackVisible: false,
+          headerShadowVisible: false,
+          header: () => <Header isBackVisible headerTitle="Scanned Details" />,
+        }}
+      />
+
+      <Stack.Screen
         name="scan-result"
         options={{
           headerBackVisible: false,

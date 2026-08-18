@@ -109,3 +109,10 @@ interface IAuditScanDetails {
     scan_result: number;
     key: string;
 }
+
+interface QRResponseItem {
+  success: boolean;
+  status: number;
+  message: string;
+  data: QRData;
+}

@@ -8,7 +8,12 @@ import {
   BarcodeType,
 } from "expo-camera";
 import { Button } from "@/components/ui/button";
-import { router, useIsFocused, useLocalSearchParams, useNavigation } from "expo-router";
+import {
+  router,
+  useIsFocused,
+  useLocalSearchParams,
+  useNavigation,
+} from "expo-router";
 import Header from "@/components/Header";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text } from "@/components/ui/text";
@@ -17,6 +22,7 @@ import BarcodeMask from "@meksiabdou/react-native-barcode-mask";
 import * as Haptics from "expo-haptics";
 import axiosInstance from "@/utils/axiosInstance";
 import {
+  SCAN_ANSWER_BOOKLET,
   SCAN_AUDIT_TRIALS,
   SCAN_INSTITUTE_CERT,
   SCAN_VERIFIER_CERT,
@@ -28,17 +34,21 @@ import { storage } from "@/utils/storageService";
 
 type Props = {};
 
-const CameraScreen = ({ }: Props) => {
+const CameraScreen = ({}: Props) => {
   const { userDetails } = useUser();
   const [scanned, setScanned] = useState<boolean>(false);
-  const [isFetchingScannedData, setIsFetchingScannedData] = useState<boolean>(false);
+  const [isFetchingScannedData, setIsFetchingScannedData] =
+    useState<boolean>(false);
   const [permission, requestPermission] = useCameraPermissions();
   const toast = useToast();
-  const { scanner_type } = useLocalSearchParams<{ scanner_type: BarcodeType }>();
+  const { scanner_type, scan_item } = useLocalSearchParams<{
+    scanner_type: BarcodeType;
+    scan_item: string;
+  }>();
   const cameraRef = useRef<CameraView>(null);
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  const scanTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const scanTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const loginType = storage.getString("login_type");
 
   // Clean up timeouts on unmount
@@ -87,21 +97,29 @@ const CameraScreen = ({ }: Props) => {
       const otherBarcodeData = formatBarcodeData.join("\n");
 
       const scannedFormData = new FormData();
-      scannedFormData.append("device_type", Platform.OS);
-      scannedFormData.append(
-        "scanned_by",
-        userDetails?.username || userDetails?.institute_username
+      const scannedBy = String(
+        userDetails?.username ?? userDetails?.institute_username ?? "",
       );
-      scannedFormData.append("user_id", userDetails?.id);
+      const userId = String(userDetails?.id ?? "");
+
+      scannedFormData.append("device_type", Platform.OS);
+      scannedFormData.append("scanned_by", scannedBy);
+      scannedFormData.append("user_id", userId);
       scannedFormData.append("key", sanitizeBarcodeData);
+
+      if (scan_item) {
+        scannedFormData.append("user_type", "1");
+      }
 
       const response = await axiosInstance.post(
         scanner_type === "code39"
           ? SCAN_AUDIT_TRIALS
           : loginType === "verifier"
             ? SCAN_VERIFIER_CERT
-            : SCAN_INSTITUTE_CERT,
-        scannedFormData
+            : scan_item == "answer_booklet"
+              ? SCAN_ANSWER_BOOKLET
+              : SCAN_INSTITUTE_CERT,
+        scannedFormData,
       );
 
       if (!response.data.success) {
@@ -120,6 +138,14 @@ const CameraScreen = ({ }: Props) => {
           params: {
             scanned_results: JSON.stringify(response.data?.data),
             qr_data: otherBarcodeData,
+          },
+        });
+      } else if (scan_item === "answer_booklet") {
+        router.navigate({
+          pathname: "/booklet",
+          params: {
+            success: String(response?.data?.success),
+            data: JSON.stringify(response?.data?.data),
           },
         });
       } else {
@@ -167,7 +193,8 @@ const CameraScreen = ({ }: Props) => {
     return (
       <SafeAreaView className="flex-1 items-center justify-center bg-stone-900 px-6 gap-4">
         <Text className="text-white text-center text-base">
-          We need to access your camera to scan your document's / certificate's QR Code
+          We need to access your camera to scan your document's / certificate's
+          QR Code
         </Text>
         <Button onPress={requestPermission}>
           <Text>Continue</Text>
@@ -194,7 +221,6 @@ const CameraScreen = ({ }: Props) => {
         showAnimatedLine={false}
         edgeRadius={8}
         outerMaskOpacity={0.6}
-
       />
 
       {isFetchingScannedData && (

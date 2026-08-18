@@ -24,12 +24,13 @@ type Props = {};
 const HomeScreen = ({}: Props) => {
   const { userDetails } = useUser();
 
-  const goToCameraScanner = (scanner_type: BarcodeType) => {
+  const goToCameraScanner = (scanner_type: BarcodeType, scan_item?: string) => {
     
     router.navigate({
       pathname: '/(root)/camera',
       params: {
         scanner_type: scanner_type,
+        scan_item: scan_item,
       },
     });
   };
@@ -89,7 +90,7 @@ const HomeScreen = ({}: Props) => {
             </TouchableOpacity>
             {TITLES?.SHOW_ANSWER_BOOKLET && (
               <TouchableOpacity
-                onPress={() => goToCameraScanner("qr")}
+                onPress={() => goToCameraScanner("qr" , "answer_booklet")}
                 className="w-[48%]"
               >
                 <Card className="w-full">
