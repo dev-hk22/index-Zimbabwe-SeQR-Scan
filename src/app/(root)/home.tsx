@@ -14,6 +14,7 @@ import useUser from "@/hooks/useUser";
 import { ScanQrCode } from "@/libs/icons/ScanQr";
 import { FileClockIcon } from "@/libs/icons/FileClockIcon";
 import { ScanBarcodeIcon } from "@/libs/icons/ScanBarcode";
+import { BarcodeIcon } from "@/libs/icons/BarcodeIcon";
 import { router } from "expo-router";
 import { Text } from "@/components/ui/text";
 import { BarcodeType } from "expo-camera";
@@ -79,7 +80,7 @@ const HomeScreen = ({}: Props) => {
                   <CardDescription>Scan and view audit trials</CardDescription>
                 </CardHeader>
                 <CardContent className="gap-2">
-                  <ScanBarcodeIcon
+                  <BarcodeIcon
                     className="text-primary"
                     height={"35"}
                     width={"35"}
