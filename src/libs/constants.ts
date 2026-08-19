@@ -23,10 +23,10 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'JSSAHER',
+    APP_NAME: 'Nakuru',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
-    SHOW_ANSWER_BOOKLET: true
+    SHOW_ANSWER_BOOKLET: false
 }
 
 export function cleanBase64(input: string): string {

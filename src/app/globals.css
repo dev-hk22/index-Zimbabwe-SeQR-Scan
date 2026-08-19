@@ -2,99 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ==========================================================================
-   JSS Academy of Higher Education & Research — Theme
-   Derived from logo: Orange #F1642A + Royal Blue #2B4593
-   Light mode only
-   ========================================================================== */
-
 @layer base {
   :root {
+    /* ===== LIGHT MODE (Nakuru County) ===== */
+
     --background: 0 0% 100%;
-    --foreground: 228 45% 15%;
+    --foreground: 340 15% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 228 45% 15%;
+    --card-foreground: 340 15% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 228 45% 15%;
+    --popover-foreground: 340 15% 14%;
 
-    --primary: 228 55% 38%;
+    /* Flamingo Pink (flanking birds, ~#E8368F) */
+    --primary: 328 72% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 18 85% 54%;
-    --secondary-foreground: 0 0% 100%;
+    /* Light Pink Surface */
+    --secondary: 328 55% 95%;
+    --secondary-foreground: 328 60% 34%;
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 10% 40%;
+    /* Gear Olive Accent (~#8A9B2E) */
+    --accent: 74 40% 90%;
+    --accent-foreground: 74 45% 28%;
 
-    --accent: 18 85% 54%;
-    --accent-foreground: 0 0% 100%;
+    /* Neutral Colors */
+    --muted: 0 0% 96%;
+    --muted-foreground: 340 8% 46%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    /* Wordmark Red (~#E5252A) mapped to destructive */
+    --destructive: 358 78% 52%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 228 55% 38%;
+    --border: 328 18% 88%;
+    --input: 328 18% 88%;
 
-    --radius: 0.5rem;
-
-    --chart-1: 228 55% 38%;
-    --chart-2: 18 85% 54%;
-    --chart-3: 220 20% 60%;
-    --chart-4: 228 55% 60%;
-    --chart-5: 18 85% 70%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+    --ring: 328 72% 55%;
   }
 }
 
 @layer components {
-  .card-surface {
-    @apply bg-card text-card-foreground rounded-lg border border-border shadow-sm;
+  .signUpFormText {
+    @apply text-base xs:text-lg font-semibold text-primary mb-1;
   }
 
-  .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium transition-colors;
+  .signUpInputs {
+    @apply rounded-lg border border-input bg-background px-3 py-2 transition;
   }
 
-  .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-md px-4 py-2 font-medium transition-colors;
+  .primaryButton {
+    @apply bg-primary text-primary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  .btn-outline {
-    @apply border border-input bg-background hover:bg-muted rounded-md px-4 py-2 font-medium transition-colors;
+  .signUpInputs_Focused {
+    @apply border-primary ring-2 ring-primary;
   }
 
-  .badge-primary {
-    @apply bg-primary/10 text-primary rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  .secondaryButton {
+    @apply bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95 transition duration-200 rounded-lg px-4 py-2 font-medium;
   }
 
-  .badge-secondary {
-    @apply bg-secondary/10 text-secondary rounded-full px-2.5 py-0.5 text-xs font-semibold;
-  }
-
-  .input-field {
-    @apply border border-input bg-background rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring;
-  }
-
-  .header-bar {
-    @apply bg-primary text-primary-foreground;
-  }
-
-  .accent-bar {
-    @apply bg-secondary text-secondary-foreground;
-  }
-
-  .link-accent {
-    @apply text-secondary hover:text-secondary/80 font-medium;
+  .accentButton {
+    @apply bg-accent text-accent-foreground hover:brightness-110 transition rounded-lg px-4 py-2 font-medium;
   }
 }
