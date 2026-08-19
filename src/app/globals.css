@@ -4,41 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Nakuru County) ===== */
+    /* ===== LIGHT MODE (NEST - Nidan Education & Skill Training) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 340 15% 14%;
+    --foreground: 205 45% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 340 15% 14%;
+    --card-foreground: 205 45% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 340 15% 14%;
+    --popover-foreground: 205 45% 14%;
 
-    /* Flamingo Pink (flanking birds, ~#E8368F) */
-    --primary: 328 72% 55%;
+    /* NEST Blue (E/S/T letters, puzzle pieces, ~#1D7CB8) */
+    --primary: 202 72% 40%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Pink Surface */
-    --secondary: 328 55% 95%;
-    --secondary-foreground: 328 60% 34%;
+    /* Light Blue Surface */
+    --secondary: 202 50% 94%;
+    --secondary-foreground: 202 60% 28%;
 
-    /* Gear Olive Accent (~#8A9B2E) */
-    --accent: 74 40% 90%;
-    --accent-foreground: 74 45% 28%;
+    /* NEST Orange Accent (N letter/puzzle piece, ~#EF8022) */
+    --accent: 28 85% 92%;
+    --accent-foreground: 28 75% 38%;
 
     /* Neutral Colors */
-    --muted: 0 0% 96%;
-    --muted-foreground: 340 8% 46%;
+    --muted: 202 16% 96%;
+    --muted-foreground: 205 8% 46%;
 
-    /* Wordmark Red (~#E5252A) mapped to destructive */
-    --destructive: 358 78% 52%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 328 18% 88%;
-    --input: 328 18% 88%;
+    --border: 202 20% 88%;
+    --input: 202 20% 88%;
 
-    --ring: 328 72% 55%;
+    --ring: 202 72% 40%;
   }
 }
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Nakuru SeQR Scan",
-    "slug": "nakuru-seqr-scan",
+    "name": "Nidan Technologies SeQR Scan",
+    "slug": "nidantechnologies-seqr-scan",
     "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.nakuruseqr",
+      "bundleIdentifier": "com.NidanTechnologies",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.nakuruseqr",
+      "package": "com.nidantechnologies",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
