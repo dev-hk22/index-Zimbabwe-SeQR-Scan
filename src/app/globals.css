@@ -4,40 +4,41 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (NEST - Nidan Education & Skill Training) ===== */
+    /* ===== LIGHT MODE (Priyadarshini Bhagwati College of Engineering, Nagpur) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 205 45% 14%;
+    --foreground: 12 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 205 45% 14%;
+    --card-foreground: 12 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 205 45% 14%;
+    --popover-foreground: 12 40% 12%;
 
-    /* NEST Blue (E/S/T letters, puzzle pieces, ~#1D7CB8) */
-    --primary: 202 72% 40%;
+    /* Outer Ring Orange (~#E8622C) */
+    --primary: 18 76% 53%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Blue Surface */
-    --secondary: 202 50% 94%;
-    --secondary-foreground: 202 60% 28%;
+    /* Light Orange Surface */
+    --secondary: 18 60% 95%;
+    --secondary-foreground: 18 65% 32%;
 
-    /* NEST Orange Accent (N letter/puzzle piece, ~#EF8022) */
-    --accent: 28 85% 92%;
-    --accent-foreground: 28 75% 38%;
+    /* Maroon Accent (rays/book icon, ~#8B2E2E) */
+    --accent: 4 35% 92%;
+    --accent-foreground: 4 45% 32%;
 
     /* Neutral Colors */
-    --muted: 202 16% 96%;
-    --muted-foreground: 205 8% 46%;
+    --muted: 18 14% 96%;
+    --muted-foreground: 12 8% 46%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    /* Sunburst Gold (~#F4A825) mapped to destructive */
+    --destructive: 38 88% 53%;
+    --destructive-foreground: 38 40% 12%;
 
-    --border: 202 20% 88%;
-    --input: 202 20% 88%;
+    --border: 18 20% 88%;
+    --input: 18 20% 88%;
 
-    --ring: 202 72% 40%;
+    --ring: 18 76% 53%;
   }
 }
 

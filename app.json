@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Nidan Technologies SeQR Scan",
-    "slug": "nidantechnologies-seqr-scan",
-    "version": "2.5.0",
+    "name": "PBCE SeQR Scan",
+    "slug": "pbce-seqr-scan",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.NidanTechnologies",
+      "bundleIdentifier": "org.reactjs.native.example.pcbeseqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.nidantechnologies",
+      "package": "com.pcbeseqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 8
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
