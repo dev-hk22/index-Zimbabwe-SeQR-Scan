@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PJLCP SeQR Scan",
-    "slug": "pjlcp-seqr-scan",
+    "name": "People's Unversity SeQR Scan",
+    "slug": "peoples_university-seqr-scan",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.reactjs.native.example.pjlcp",
+      "bundleIdentifier": "org.reactjs.native.example.peoples-university",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pjlcp",
+      "package": "com.peoples_university",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 4
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
