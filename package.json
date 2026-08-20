@@ -1,5 +1,5 @@
 {
-  "name": "PCE_SeQR_Scan",
+  "name": "PJLCP_SeQR_Scan",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {

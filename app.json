@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PCE SeQR Scan",
-    "slug": "pce-seqr-scan",
+    "name": "PJLCP SeQR Scan",
+    "slug": "pjlcp-seqr-scan",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.pceseqrdoc",
+      "bundleIdentifier": "org.reactjs.native.example.pjlcp",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pceseqrdoc",
+      "package": "com.pjlcp",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
