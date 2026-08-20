@@ -23,7 +23,7 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'Peoples Unversity',
+    APP_NAME: 'Print Options',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
     SHOW_ANSWER_BOOKLET: false

@@ -4,40 +4,41 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (People's University - "Beyond Limit") ===== */
+    /* ===== LIGHT MODE (Print Options Ltd) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 224 45% 14%;
+    --foreground: 0 0% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 45% 14%;
+    --card-foreground: 0 0% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 45% 14%;
+    --popover-foreground: 0 0% 12%;
 
-    /* People's University Navy (crest/wordmark, ~#243A7C) */
-    --primary: 224 55% 32%;
+    /* Magenta (wheel quadrant/"options" text, ~#E4145A) */
+    --primary: 342 82% 48%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Navy Surface */
-    --secondary: 224 35% 95%;
-    --secondary-foreground: 224 50% 26%;
+    /* Light Magenta Surface */
+    --secondary: 342 60% 95%;
+    --secondary-foreground: 342 65% 32%;
 
-    /* Gold Accent (ribbons/underline, ~#F0A93E) */
-    --accent: 40 80% 90%;
-    --accent-foreground: 40 65% 34%;
+    /* Gold Accent (wheel quadrant, ~#F5B715) */
+    --accent: 44 90% 90%;
+    --accent-foreground: 44 65% 32%;
 
     /* Neutral Colors */
-    --muted: 224 14% 96%;
-    --muted-foreground: 224 8% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
 
-    --destructive: 0 84% 60%;
+    /* Sky Blue (wheel quadrant, ~#29ABE2) mapped to destructive */
+    --destructive: 199 74% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 224 18% 88%;
-    --input: 224 18% 88%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
 
-    --ring: 224 55% 32%;
+    --ring: 342 82% 48%;
   }
 }
 
