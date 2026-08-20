@@ -4,41 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Priyadarshini Bhagwati College of Engineering, Nagpur) ===== */
+    /* ===== LIGHT MODE (Priyadarshini College of Engineering) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 12 40% 12%;
+    --foreground: 243 45% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 12 40% 12%;
+    --card-foreground: 243 45% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 12 40% 12%;
+    --popover-foreground: 243 45% 14%;
 
-    /* Outer Ring Orange (~#E8622C) */
-    --primary: 18 76% 53%;
+    /* PCE Indigo (gear/wordmark, ~#3F3C99) */
+    --primary: 243 45% 42%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Orange Surface */
-    --secondary: 18 60% 95%;
-    --secondary-foreground: 18 65% 32%;
+    /* Light Indigo Surface */
+    --secondary: 243 35% 95%;
+    --secondary-foreground: 243 45% 28%;
 
-    /* Maroon Accent (rays/book icon, ~#8B2E2E) */
-    --accent: 4 35% 92%;
-    --accent-foreground: 4 45% 32%;
+    /* Indigo Accent */
+    --accent: 243 30% 92%;
+    --accent-foreground: 243 45% 30%;
 
     /* Neutral Colors */
-    --muted: 18 14% 96%;
-    --muted-foreground: 12 8% 46%;
+    --muted: 243 14% 96%;
+    --muted-foreground: 243 8% 46%;
 
-    /* Sunburst Gold (~#F4A825) mapped to destructive */
-    --destructive: 38 88% 53%;
-    --destructive-foreground: 38 40% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 18 20% 88%;
-    --input: 18 20% 88%;
+    --border: 243 18% 88%;
+    --input: 243 18% 88%;
 
-    --ring: 18 76% 53%;
+    --ring: 243 45% 42%;
   }
 }
 

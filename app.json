@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PBCE SeQR Scan",
-    "slug": "pbce-seqr-scan",
+    "name": "PCE SeQR Scan",
+    "slug": "pce-seqr-scan",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.reactjs.native.example.pcbeseqrscan",
+      "bundleIdentifier": "com.pceseqrdoc",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pcbeseqrscan",
+      "package": "com.pceseqrdoc",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 2
+      "versionCode": 4
     },
     "web": {
       "bundler": "metro",
