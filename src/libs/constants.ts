@@ -23,7 +23,7 @@ export const STORAGE_KEYS = {
 }
 
 export const TITLES = {
-    APP_NAME: 'Print Options',
+    APP_NAME: 'print24x7',
     SHOW_POWER_BY: false,
     SHOW_REMOVE_ACCOUNT: true,
     SHOW_ANSWER_BOOKLET: false
