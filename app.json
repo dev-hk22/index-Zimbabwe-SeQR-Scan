@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SECURA SeQR Scan",
-    "slug": "secura-seqr-scan",
+    "name": "SGRSA SeQR Scan",
+    "slug": "sgrsa-seqr-scan",
     "version": "2.4.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.securaseqrscan",
+      "bundleIdentifier": "com.scube.sgrsaseqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.securaseqrscan",
+      "package": "com.sgrsaseqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
