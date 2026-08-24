@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "SGRSA SeQR Scan",
-    "slug": "sgrsa-seqr-scan",
-    "version": "2.4.0",
+    "name": "SIU SeQR Scan",
+    "slug": "siu-seqr-scan",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.scube.sgrsaseqrscan",
+      "bundleIdentifier": "org.reactjs.native.example.sis-seqr-doc",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.sgrsaseqrscan",
+      "package": "com.sis_seqr_doc",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 41943136
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",

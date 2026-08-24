@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Excel in Skills & Technology) ===== */
+    /* ===== LIGHT MODE (Mock SLM) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 142 40% 12%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 142 40% 12%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 142 40% 12%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Shield Green (border/text/book icon, ~#1E8A3C) */
-    --primary: 137 63% 32%;
+    /* Mock SLM Red (border/wordmark, ~#EE1C25) */
+    --primary: 358 85% 51%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Green Surface */
-    --secondary: 137 40% 94%;
-    --secondary-foreground: 137 55% 24%;
+    /* Light Red Surface */
+    --secondary: 358 70% 95%;
+    --secondary-foreground: 358 60% 34%;
 
-    /* Shield Gold Accent (~#F5C518) */
-    --accent: 48 90% 90%;
-    --accent-foreground: 48 65% 32%;
+    /* Black Accent (mountain icon, ~#0A0A0A) */
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 12%;
 
     /* Neutral Colors */
-    --muted: 137 14% 96%;
-    --muted-foreground: 142 8% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 358 85% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 137 18% 88%;
-    --input: 137 18% 88%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
 
-    --ring: 137 63% 32%;
+    --ring: 358 85% 51%;
   }
 }
 
