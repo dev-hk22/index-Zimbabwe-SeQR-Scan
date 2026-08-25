@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE (Mock SLM) ===== */
+    /* ===== LIGHT MODE (Index Business Solutions) ===== */
 
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 224 40% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 224 40% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 224 40% 14%;
 
-    /* Mock SLM Red (border/wordmark, ~#EE1C25) */
-    --primary: 358 85% 51%;
+    /* Index Navy (wordmark, ~#2E3A87) */
+    --primary: 231 48% 36%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Red Surface */
-    --secondary: 358 70% 95%;
-    --secondary-foreground: 358 60% 34%;
+    /* Light Navy Surface */
+    --secondary: 231 32% 95%;
+    --secondary-foreground: 231 45% 28%;
 
-    /* Black Accent (mountain icon, ~#0A0A0A) */
-    --accent: 0 0% 92%;
-    --accent-foreground: 0 0% 12%;
+    /* Red Accent (dot/slash/"Business Solutions", ~#E8352E) */
+    --accent: 4 78% 93%;
+    --accent-foreground: 4 65% 42%;
 
     /* Neutral Colors */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 46%;
+    --muted: 231 12% 96%;
+    --muted-foreground: 224 8% 46%;
 
-    --destructive: 358 85% 51%;
+    --destructive: 4 78% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
+    --border: 231 18% 88%;
+    --input: 231 18% 88%;
 
-    --ring: 358 85% 51%;
+    --ring: 231 48% 36%;
   }
 }
 

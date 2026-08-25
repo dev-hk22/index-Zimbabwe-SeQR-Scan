@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SIU SeQR Scan",
-    "slug": "siu-seqr-scan",
+    "name": "Index SeQR Scan",
+    "slug": "index-seqr-scan",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
@@ -12,7 +12,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "org.reactjs.native.example.sis-seqr-doc",
+      "bundleIdentifier": "com.index.seqrscan",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -23,7 +23,7 @@
         "foregroundImage": "./src/assets/images/logos/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.sis_seqr_doc",
+      "package": "com.index.seqrscan",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
