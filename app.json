@@ -2,7 +2,7 @@
   "expo": {
     "name": "Index SeQR Scan",
     "slug": "index-seqr-scan",
-    "version": "1.2.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/logos/icon.png",
     "scheme": "myapp",
@@ -31,7 +31,7 @@
         "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "versionCode": 2
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
